@@ -1,0 +1,356 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     11600,        347]
+NotebookOptionsPosition[     11002,        322]
+NotebookOutlinePosition[     11352,        337]
+CellTagsIndexPosition[     11309,        334]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "In", " ", "this", " ", "page", " ", "I", " ", "want", " ", "to", " ", 
+    "make", " ", "the", " ", "animation", " ", "of", " ", "projectile"}], "-", 
+   RowBox[{"motion", "."}]}]}]], "Input",
+ EmphasizeSyntaxErrors->True,
+ CellLabel->"In[34]:="],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"m", "=", "0.14"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"v", "=", "45"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Theta]", "=", 
+     RowBox[{"\[Pi]", "/", "3"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"g", "=", "9.829878576"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"b", "=", "0.033"}]}]}]], "Input",
+ CellLabel->"In[34]:="],
+
+Cell[BoxData["0.033`"], "Output",
+ CellChangeTimes->{3.5546252858405437`*^9, 3.554625318337403*^9},
+ CellLabel->"Out[38]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"se3", "[", "x_", "]"}], "=", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"g", " ", 
+        SuperscriptBox["m", "2"], " ", 
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "-", 
+          FractionBox[
+           RowBox[{"b", " ", "x", " ", 
+            RowBox[{"Sec", "[", "\[Theta]", "]"}]}], 
+           RowBox[{"m", " ", "v"}]]}], "]"}]}], 
+       SuperscriptBox["b", "2"]], "+", 
+      FractionBox[
+       RowBox[{"g", " ", "x", " ", "m", " ", 
+        RowBox[{"Sec", "[", "\[Theta]", "]"}]}], 
+       RowBox[{"b", " ", "v"}]], "+", 
+      RowBox[{"x", " ", 
+       RowBox[{"Tan", "[", "\[Theta]", "]"}]}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"se4", "[", "x_", "]"}], "=", 
+    RowBox[{
+     FractionBox["1", 
+      SuperscriptBox["b", "2"]], 
+     RowBox[{"(", 
+      RowBox[{"m", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", " ", "v", " ", 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "+", 
+         RowBox[{"g", " ", "m", " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", 
+              FractionBox[
+               RowBox[{"b", " ", "x", " ", 
+                RowBox[{"Sec", "[", "\[Theta]", "]"}]}], 
+               RowBox[{"m", " ", "v"}]]}], "]"}], "-", 
+            RowBox[{"2", " ", 
+             RowBox[{"Log", "[", 
+              RowBox[{"1", "+", 
+               FractionBox[
+                RowBox[{"b", " ", "v", " ", 
+                 RowBox[{"Sin", "[", "\[Theta]", "]"}]}], 
+                RowBox[{"g", " ", "m"}]]}], "]"}]}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"g", " ", 
+               SuperscriptBox["m", "2"], " ", "v", " ", 
+               RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ")"}], "/", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"b", " ", "x"}], "-", 
+                 RowBox[{"m", " ", "v", " ", 
+                  RowBox[{"Cos", "[", "\[Theta]", "]"}]}]}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"g", " ", "m"}], "+", 
+                 RowBox[{"b", " ", "v", " ", 
+                  RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], ")"}]}], 
+              ")"}]}]}], ")"}]}]}], ")"}]}], ")"}]}]}]}]}]], "Input",
+ CellLabel->"In[39]:="],
+
+Cell[BoxData[
+ RowBox[{"128.5583103764922`", " ", 
+  RowBox[{"(", 
+   RowBox[{"1.2860477246198914`", "\[InvisibleSpace]", "+", 
+    RowBox[{"1.3761830006400002`", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "0.31970132909802995`"}], "+", 
+       FractionBox["1.628324852119199`", 
+        RowBox[{
+         RowBox[{"-", "3.1500000000000004`"}], "+", 
+         RowBox[{"0.033`", " ", "x"}]}]], "-", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", 
+         RowBox[{"0.010476190476190476`", " ", "x"}]}], "]"}]}], ")"}]}]}], 
+   ")"}]}]], "Output",
+ CellChangeTimes->{3.5546252881426754`*^9, 3.554625318358404*^9},
+ CellLabel->"Out[40]="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"ListPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"se3", "[", "x", "]"}]}], "}"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "75"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "50"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "1", ",", "50", ",", "1"}], "}"}]}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"se4", "[", "x", "]"}]}], "}"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "75"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "50"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "50", ",", "70", ",", "1"}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellLabel->"In[41]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{50., 47.978788180587}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{51., 47.594215220566596`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{52., 47.1003493957211}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{53., 46.48730984556722}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{54., 45.744158160149475`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{55., 44.8587599465527}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{56., 43.81762455974532}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{57., 42.60571892099184}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{58., 41.206250459970164`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{59., 39.600413107466224`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{60., 37.7670888707415}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{61., 35.68249575958231}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{62., 33.31977058607514}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{63., 30.64847228556842}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{64., 27.633987697557952`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{65., 24.236816927056918`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{66., 20.411709099081577`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{67., 16.10661099268503}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{68., 11.26137995465087}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{69., 5.806197593856659}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True], ",", 
+   GraphicsBox[
+    {Hue[0.67, 0.6, 0.6], PointBox[{{70., -0.34039946537490556`}}]},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    PlotRange->{{0, 75}, {0, 50}},
+    PlotRangeClipping->True]}], "}"}]], "Output",
+ CellChangeTimes->{{3.5546252898857756`*^9, 3.5546253184334083`*^9}},
+ CellLabel->"Out[42]="]
+}, Open  ]]
+},
+WindowSize->{630, 438},
+WindowMargins->{{10, Automatic}, {Automatic, 2}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
+StyleDefinitions->"ArticleModern.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 320, 8, 64, "Input"],
+Cell[CellGroupData[{
+Cell[890, 32, 466, 13, 144, "Input"],
+Cell[1359, 47, 123, 2, 42, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1519, 54, 2479, 69, 293, "Input"],
+Cell[4001, 125, 659, 17, 79, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4697, 147, 1275, 40, 124, "Input"],
+Cell[5975, 189, 5011, 130, 1715, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
